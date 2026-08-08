@@ -26,12 +26,6 @@ def cargar_base():
 modelo, metadata = cargar_modelo()
 df = cargar_base()
 
-st.write("CONTENIDO DE METADATA:")
-st.json(metadata)
-
-st.write("CLAVES DISPONIBLES:")
-st.write(list(metadata.keys()))
-
 mapa = {int(k): v for k, v in metadata['mapa_riesgo'].items()}
 
 st.caption(metadata['nombre_modelo'])
